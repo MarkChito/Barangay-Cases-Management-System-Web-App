@@ -1,0 +1,30 @@
+<pages>
+    <link>
+        <title>Dashboard</title>
+        <url>dashboard</url>
+    </link>
+    <link>
+        <title>Barangay Cases</title>
+        <url>barangay_cases</url>
+    </link>
+    <link>
+        <title>Employees</title>
+        <url>employees</url>
+    </link>
+    <link>
+        <title>Announcements</title>
+        <url>announcements</url>
+    </link>
+    <link>
+        <title>Barangay News</title>
+        <url>barangay_news</url>
+    </link>
+    <link>
+        <title>New Barangay Case</title>
+        <url>new_barangay_case</url>
+    </link>
+    <link>
+        <title>My Profile</title>
+        <url>profile</url>
+    </link>
+</pages>
