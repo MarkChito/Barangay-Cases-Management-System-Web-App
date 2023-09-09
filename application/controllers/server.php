@@ -755,6 +755,17 @@ class server extends CI_Controller
         readfile($file);
     }
 
+    public function download_exe_file()
+    {
+        $file = 'dist/installers/windows/barangay_cases_management_system.exe';
+        $filename = 'barangay_cases_management_system.exe';
+
+        header('Content-Type: application/octet-stream');
+        header("Content-Transfer-Encoding: Binary");
+        header("Content-disposition: attachment; filename=\"" . $filename . "\"");
+        readfile($file);
+    }
+
     public function logout()
     {
         $this->session->unset_userdata("primary_key");

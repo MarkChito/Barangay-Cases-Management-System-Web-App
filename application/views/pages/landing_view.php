@@ -45,7 +45,7 @@
                             <i class="bi bi-cloud-download"></i> Downloads
                         </a>
                         <div class="dropdown-menu" aria-labelledby="downloadsDropdown">
-                            <a class="dropdown-item" href="<?= base_url() ?>dist/installers/windows/barangay_cases_management_system.exe" download="barangay_cases_management_system.exe">
+                            <a class="dropdown-item" href="<?= base_url() ?>server/download_exe_file">
                                 <i class="bi bi-window me-1"></i> Windows (exe)
                             </a>
                             <a class="dropdown-item" id="btn_download_apk" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#download_apk_modal" url="<?= base_url() ?>server/download_apk_file">
