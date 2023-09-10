@@ -111,7 +111,7 @@ if ($user_data) {
                 <!-- Profile -->
                 <li class="nav-item dropdown pe-3">
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="javascript:void(0)" data-bs-toggle="dropdown">
-                        <img src="<?= $this->session->userdata("image") ? base_url() . "dist/img/user_upload/" . $this->session->userdata("image") : base_url() . "dist/img/user_upload/default_user_image.png" ?>" alt="Profile" class="rounded-circle">
+                        <img src="<?= $this->session->userdata("image") ? base_url() . "dist/img/user_upload/" . $this->session->userdata("image") : base_url() . "dist/img/user_upload/default_user_image.png" ?>" alt="Profile" class="rounded-circle" style="width: 35px !important; height: 35px !important">
                         <span class="d-none d-md-block dropdown-toggle ps-2"><?= formatName($this->session->userdata("first_name")) . $this->session->userdata("last_name") ?></span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
