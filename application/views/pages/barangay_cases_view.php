@@ -53,7 +53,9 @@
                                     <td class="text-center">
                                         <span title="View" class="bi bi-eye text-primary barangay_case_view_data more_info" style="cursor: pointer;" primary_key="<?= $barangay_cases->primary_key ?>" data-bs-toggle="modal" data-bs-target="#barangay_case_modal"></span>
                                         <span title="Edit" class="bi bi-pencil text-success barangay_case_data more_info" style="cursor: pointer;" primary_key="<?= $barangay_cases->primary_key ?>"></span>
-                                        <span title="Delete" class="bi bi-trash text-danger delete_barangay_case more_info" style="cursor: pointer;" primary_key="<?= $barangay_cases->primary_key ?>"></span>
+                                        <?php if ($this->session->userdata("user_type") == "admin") : ?>
+                                            <span title="Delete" class="bi bi-trash text-danger delete_barangay_case more_info" style="cursor: pointer;" primary_key="<?= $barangay_cases->primary_key ?>"></span>
+                                        <?php endif ?>
                                     </td>
                                 </tr>
                             <?php endforeach ?>
