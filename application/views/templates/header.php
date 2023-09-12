@@ -193,7 +193,7 @@ if ($user_data) {
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= base_url() ?>announcements" class="nav-link <?= $this->session->userdata("current_tab") != "announcements" ? "collapsed" : null ?> <?= $this->session->userdata("user_type") != "admin" ? "d-none" : null ?>">
+                <a href="<?= base_url() ?>announcements" class="nav-link <?= $this->session->userdata("current_tab") != "announcements" ? "collapsed" : null ?>">
                     <i class="bi bi-megaphone"></i>
                     <span>Announcements</span>
                     &nbsp;&nbsp;&nbsp;<span class="spinner-border spinner-border-sm d-none tab_spinner" role="status"></span>
