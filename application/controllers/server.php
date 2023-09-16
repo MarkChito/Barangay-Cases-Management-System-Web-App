@@ -766,6 +766,11 @@ class server extends CI_Controller
         readfile($file);
     }
 
+    public function upload_image_from_desktop_app()
+    {
+        echo $this->file_upload("file");
+    }
+
     public function logout()
     {
         $this->session->unset_userdata("primary_key");
