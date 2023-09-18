@@ -28,7 +28,8 @@
                     <table class="table datatable">
                         <thead>
                             <tr>
-                                <th>Date and Time</th>
+                                <th>Date</th>
+                                <th>Time</th>
                                 <th>Title</th>
                                 <th>Body</th>
                                 <th class="text-center">Action</th>
@@ -39,10 +40,12 @@
                                 <?php
                                 $date_and_time = new DateTime($announcements->date_and_time);
 
-                                $date_and_time = $date_and_time->format("F j, Y - h:i A");
+                                $date = $date_and_time->format("F j, Y");
+                                $time = $date_and_time->format("h:i A");
                                 ?>
                                 <tr>
-                                    <td><?= $date_and_time ?></td>
+                                    <td><?= $date ?></td>
+                                    <td><?= $time ?></td>
                                     <td><?= $announcements->title ?></td>
                                     <td><?= $announcements->body ?></td>
                                     <td class="text-center">
