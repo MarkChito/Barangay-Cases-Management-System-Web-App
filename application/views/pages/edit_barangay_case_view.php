@@ -6,7 +6,11 @@
             <nav>
                 <ol class="breadcrumb ">
                     <li class="breadcrumb-item"><a href="<?= base_url() ?>dashboard">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>barangay_cases">Barangay Cases</a></li>
+                    <?php if ($this->session->userdata("is_barangay_cases")) : ?>
+                        <li class="breadcrumb-item"><a href="<?= base_url() ?>barangay_cases">Barangay Cases</a></li>
+                    <?php else : ?>
+                        <li class="breadcrumb-item"><a href="<?= base_url() ?>pending_cases">Pending Cases</a></li>
+                    <?php endif ?>
                     <li class="breadcrumb-item active"><?= $this->session->userdata("title") ?></li>
                 </ol>
             </nav>
