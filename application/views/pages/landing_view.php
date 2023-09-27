@@ -204,7 +204,8 @@
                         <img id="news_image" class="border" alt="News Image" style="width: 100%; height: 300px;">
                     </div>
                     <h5 class="font-weight-bold" id="news_title"></h5>
-                    <p style="text-align: justify;" id="news_body"></p>
+                    <br>
+                    <pre style="text-align: justify;" id="news_body"></pre>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -224,7 +225,8 @@
                 <div class="modal-body announcement-body">
                     <p class="announcement-timelapse" id="announcement_timelapse"></p>
                     <h5 class="font-weight-bold" id="announcement_title"></h5>
-                    <p style="text-align: justify;" id="announcement_body"></p>
+                    <br>
+                    <pre style="text-align: justify;" id="announcement_body"></pre>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>

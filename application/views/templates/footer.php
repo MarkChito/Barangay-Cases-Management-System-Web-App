@@ -23,7 +23,7 @@
                     <div class="card-body">
                         <div class="row mt-3">
                             <div class="col-9">
-                                <p class="card-text"><b> Paña, Mark Anthony A. </b> - Leader</p>
+                                <p class="card-text"><b> Pa&ntilde;a, Mark Anthony A. </b> - Leader</p>
                                 <p class="card-text"><b> Lagrimas. Joyce P. </b> - Member</p>
                                 <p class="card-text"><b> Bordeos, John Carl P. </b> - Member</p>
                                 <p class="card-text"><b> Dispolon, Ivan Howell </b> - Member</p>
@@ -321,7 +321,8 @@
             <div class="modal-body announcement-body">
                 <p class="announcement-timelapse" id="announcement_timelapse"></p>
                 <h5 class="font-weight-bold" id="announcement_title"></h5>
-                <p style="text-align: justify;" id="announcement_body"></p>
+                <br>
+                <pre style="text-align: justify;" id="announcement_body"></pre>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -420,7 +421,8 @@
                     <img id="news_image" class="border" alt="News Image" style="width: 100%; height: 300px;">
                 </div>
                 <h5 class="font-weight-bold" id="news_title"></h5>
-                <p style="text-align: justify;" id="news_body"></p>
+                <br>
+                <pre style="text-align: justify;" id="news_body"></pre>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -900,7 +902,7 @@
 
         $("#rejectBtn").click(function() {
             var primary_key = $(this).attr("primary_key");
-            
+
             $("#rejectBtn").text("Processing Request...");
             $("#rejectBtn").attr("disabled", true);
             $("#submitBtn").attr("class", "d-none");
