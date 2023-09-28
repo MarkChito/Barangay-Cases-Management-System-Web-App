@@ -167,7 +167,7 @@
                         <div class="card-body">
                             <div class="row mt-3">
                                 <div class="col-9">
-                                    <p class="card-text"><b> <?= utf8_encode("Paña") ?>, Mark Anthony A. </b> - Leader</p>
+                                    <p class="card-text"><b> Pa&ntilde;a, Mark Anthony A. </b> - Leader</p>
                                     <p class="card-text"><b> Lagrimas. Joyce P. </b> - Member</p>
                                     <p class="card-text"><b> Bordeos, John Carl P. </b> - Member</p>
                                     <p class="card-text"><b> Dispolon, Ivan Howell </b> - Member</p>
