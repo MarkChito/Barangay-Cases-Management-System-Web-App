@@ -470,18 +470,21 @@
                 var city = $("#register_as_citizen_city").val();
                 var province = $("#register_as_citizen_province").val();
 
-                var address = barangay + ", " + city + ", " + province
-
                 var error = 0;
 
-                if (barangay.toLowerCase() != "rosario") {
+                var input_barangay = barangay.toLowerCase();
+                var input_barangay_without_spaces = input_barangay.split(' ').join('');
+                var formatted_barangay = input_barangay_without_spaces.charAt(0).toUpperCase() + input_barangay_without_spaces.slice(1);
+                
+                var address = formatted_barangay + ", " + city + ", " + province
+
+                if (formatted_barangay != "Rosario") {
                     $("#register_as_citizen_barangay").addClass("is-invalid");
                     $("#error_register_as_citizen_barangay").removeClass("d-none");
                     $("#error_register_as_citizen_barangay").addClass("text-danger");
 
                     error++;
                 }
-
 
                 if (!verify_mobile_number(mobile_number)) {
                     error++;
