@@ -839,10 +839,9 @@ class server extends CI_Controller
         $mimeParts = explode('/', $type);
         $fileExtension = end($mimeParts);
 
-        do {
-            $fileName = uniqid() . '.' . $fileExtension;
-            $fullPath = $savePath . $fileName;
-        } while (file_exists($fullPath));
+        $currentDateTime = new DateTime();
+        $fileName = md5($currentDateTime->format('Y-m-d H:i:s')) . '.' . $fileExtension;
+        $fullPath = $savePath . $fileName;
 
         if (file_put_contents($fullPath, $imageData)) {
             return $fileName;
