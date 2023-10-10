@@ -453,7 +453,7 @@
                             <strong>Date and Time:</strong>
                         </div>
                         <div class="col-9">
-                            <span id="barangay_case_date"></span> - <span id="barangay_case_time"></span>
+                            <span id="barangay_case_date"></span> <span id="barangay_case_time"></span>
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -584,12 +584,30 @@
         });
 
         $("#nextBtn").click(function() {
+            var fullname = $("#new_barangay_case_name").val();
             var mobile_number = $("#new_barangay_case_mobile_number").val();
+            var address = $("#new_barangay_case_address").val();
+            var nature_of_complaint = $("#new_barangay_case_nature_of_complaint").val();
+            var description = $("#new_barangay_case_description").val();
 
-            if (new_barangay_case_verify_mobile_number(mobile_number)) {
-                if (currentStep < totalSteps) {
-                    currentStep++;
-                    showStep(currentStep);
+            var errors = 0;
+
+            if (!fullname || !mobile_number || !address || !nature_of_complaint || !description) {
+                Swal.fire(
+                    "Oops!",
+                    "One or more fields are empty. Please fill in all the required fields.",
+                    "error"
+                );
+
+                errors++;
+            }
+
+            if (errors == 0) {
+                if (new_barangay_case_verify_mobile_number(mobile_number)) {
+                    if (currentStep < totalSteps) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
                 }
             }
         });
@@ -674,7 +692,17 @@
                         } else {
                             $("#barangay_case_image").attr("src", "dist/img/user_upload/default_image.png");
                         }
-                        $("#barangay_case_date").html(record.date);
+
+                        var dateString = record.date;
+                        var dateObj = new Date(dateString);
+
+                        var month = months[dateObj.getMonth()];
+                        var day = dateObj.getDate();
+                        var year = dateObj.getFullYear();
+
+                        var formattedDate = month + " " + day + ", " + year;
+
+                        $("#barangay_case_date").html(formattedDate);
                         $("#barangay_case_time").html(record.time);
                         $("#barangay_case_name").html(record.name);
                         $("#barangay_case_mobile_number").html(record.mobile_number);
@@ -886,6 +914,7 @@
             if (new_barangay_case_verify_mobile_number(mobile_number)) {
                 $("#submitBtn").text("Processing Request...");
                 $("#submitBtn").attr("disabled", true);
+                $("#rejectBtn").attr("class", "d-none");
                 $("#prevBtn").attr("class", "d-none");
 
                 return true;
