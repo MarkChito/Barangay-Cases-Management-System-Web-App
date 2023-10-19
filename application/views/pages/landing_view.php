@@ -64,7 +64,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url() . "login" ?>">
+                        <a class="nav-link text-white" id="btn_login_page" href="javascript:void(0)">
                             <i class="bi bi-box-arrow-in-right"></i> Login
                         </a>
                     </li>
@@ -426,6 +426,19 @@
 
             $(".getFullYear").html(new Date().getFullYear());
 
+            $("#btn_login_page").click(function() {
+                if (/Mobi|Android/i.test(navigator.userAgent)) {
+                    Swal.fire(
+                        "Oops...",
+                        "Please return to your mobile app and login.",
+                        "error"
+                    );
+                } else {
+                    location.href = base_url + "login";
+                }
+
+            })
+
             $(".view_announcement").click(function(e) {
                 var timelapse = $(this).attr("timelapse");
                 var announcement_title = $(this).attr("announcement_title");
@@ -475,7 +488,7 @@
                 var input_barangay = barangay.toLowerCase();
                 var input_barangay_without_spaces = input_barangay.split(' ').join('');
                 var formatted_barangay = input_barangay_without_spaces.charAt(0).toUpperCase() + input_barangay_without_spaces.slice(1);
-                
+
                 var address = formatted_barangay + ", " + city + ", " + province
 
                 if (formatted_barangay != "Rosario") {
