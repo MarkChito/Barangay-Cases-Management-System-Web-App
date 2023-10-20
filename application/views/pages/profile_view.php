@@ -98,14 +98,7 @@
                                         <div class="col-md-8 col-lg-9">
                                             <select name="update_profile_position" id="update_profile_position" class="form-control" required>
                                                 <option value="" selected disabled></option>
-                                                <option value="Barangay Captain" <?= $position == "Barangay Captain" ? "selected" : null ?>>Barangay Captain</option>
-                                                <option value="Barangay Kagawad" <?= $position == "Barangay Kagawad" ? "selected" : null ?>>Barangay Kagawad</option>
-                                                <option value="SK Chairman" <?= $position == "SK Chairman" ? "selected" : null ?>>SK Chairman</option>
-                                                <option value="Barangay Secretary" <?= $position == "Barangay Secretary" ? "selected" : null ?>>Barangay Secretary</option>
-                                                <option value="Barangay Treasurer" <?= $position == "Barangay Treasurer" ? "selected" : null ?>>Barangay Treasurer</option>
-                                                <option value="Barangay Health Worker" <?= $position == "Barangay Health Worker" ? "selected" : null ?>>Barangay Health Worker</option>
-                                                <option value="Barangay Tanod" <?= $position == "Barangay Tanod" ? "selected" : null ?>>Barangay Tanod</option>
-                                                <option value="Barangay Environmental Officer" <?= $position == "Barangay Environmental Officer" ? "selected" : null ?>>Barangay Environmental Officer</option>
+                                                <option value="Barangay Captain" <?= $position == "Employee" ? "selected" : null ?>>Employee</option>
                                             </select>
                                         </div>
                                     </div>

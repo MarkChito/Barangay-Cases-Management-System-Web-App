@@ -193,14 +193,7 @@
                                     <label for="add_employee_position" class="form-label mb-0">Position</label>
                                     <select name="add_employee_position" id="add_employee_position" class="form-control" required>
                                         <option value="" selected disabled></option>
-                                        <option value="Barangay Captain">Barangay Captain</option>
-                                        <option value="Barangay Kagawad">Barangay Kagawad</option>
-                                        <option value="SK Chairman">SK Chairman</option>
-                                        <option value="Barangay Secretary">Barangay Secretary</option>
-                                        <option value="Barangay Treasurer">Barangay Treasurer</option>
-                                        <option value="Barangay Health Worker">Barangay Health Worker</option>
-                                        <option value="Barangay Tanod">Barangay Tanod</option>
-                                        <option value="Barangay Environmental Officer">Barangay Environmental Officer</option>
+                                        <option value="Employee">Employee</option>
                                     </select>
                                 </div>
                             </div>
